@@ -33,4 +33,153 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+css
+/* ===== ESTILOS VFC - REGULACIÓN NEUROCARDIACA ===== */
+
+.vfcContainer {
+  min-height: 100vh;
+  background: #fffff0;
+  padding: 20px;
+}
+
+.vfcHeader {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vfcLogo h1 {
+  color: #00315f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.vfcNav {
+  display: flex;
+  gap: 10px;
+}
+
+.vfcNavBtn {
+  padding: 10px 20px;
+  border: 2px solid #008080;
+  background: transparent;
+  color: #008080;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.vfcNavBtn.active,
+.vfcNavBtn:hover {
+  background: #008080;
+  color: #ffffff;
+}
+
+.vfcSection {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.vfcSection h2 {
+  color: #00315f;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #008080;
+  padding-bottom: 10px;
+}
+
+.vfcFormGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.vfcFormGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.vfcFormGroup label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #00315f;
+}
+
+.vfcFormGroup input,
+.vfcFormGroup select {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.vfcFormGroup input:focus,
+.vfcFormGroup select:focus {
+  outline: none;
+  border-color: #008080;
+}
+
+.vfcBtnPrimary {
+  background: #008080;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}
+
+.vfcBtnPrimary:hover {
+  background: #006666;
+}
+
+.vfcBtnSecondary {
+  background: #00315f;
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.vfcBtnSecondary:hover {
+  background: #002240;
+}
+
+@media (max-width: 768px) {
+  .vfcHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .vfcNav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .vfcFormGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .vfcLogo h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
